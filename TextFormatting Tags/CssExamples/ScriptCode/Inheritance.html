@@ -1,0 +1,67 @@
+<script>
+
+    class Employee {
+
+        constructor(name,id){
+
+            this.E_name = name;
+
+            this.E_id = id;
+
+        }
+
+        work(){
+
+            console.log(this.E_name,"is Working");
+
+        }
+
+    }
+
+     
+
+    class EmployeePersonalInfo extends Employee{
+
+        constructor(name,id,email,phone){
+
+            super(name,id);
+
+            this.E_email = email;
+
+            this.E_phone = phone;
+
+        }
+
+        getDetails(){
+
+            console.log("Employee Name is: ",this.E_name);
+
+            console.log("Employee ID is: ",this.E_id);
+
+            console.log("Employee Email is: ",this.E_email);
+
+            console.log("Employee Phone is: ",this.E_phone);
+
+        }
+
+    }
+
+ 
+
+    let pe1 = new EmployeePersonalInfo('Akash',101,'ak@kod.com',9876567656);
+
+    pe1.getDetails();
+
+ 
+
+    console.log("---------------------------")
+
+    let pe2 = new EmployeePersonalInfo('Neha',102,'nk@kod.com',984567656);
+
+    pe2.getDetails();
+
+</script>
+
+
+
+

@@ -1,0 +1,29 @@
+<!--Closure will hide the function implementation-->
+<script>
+      function outerFunction() {
+        let count = 0; 
+        return {
+          increment: function() {
+            console.log(++count);
+          },
+
+          decrement: function() {
+            console.log(--count);
+          },
+
+          reset: function() {
+            let count = 0;
+            console.log(count);
+          }
+        }
+      }
+
+      const counter = outerFunction();
+      counter.increment();// 1
+      counter.increment();// 2
+      counter.decrement();// 1
+      counter.reset();// 0
+      counter.increment();// 1
+
+
+</script>

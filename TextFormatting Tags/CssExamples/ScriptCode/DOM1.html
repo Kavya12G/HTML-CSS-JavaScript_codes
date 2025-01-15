@@ -1,0 +1,47 @@
+<!--1.DOM : Tree Like structure of HTML Code is called as DOM.
+
+2.document.getElementByID() Used to target Element where given ID is 
+
+mathing-->
+
+ 
+
+<body>
+
+    <input type="text" id="in1"><br><br>
+
+    <input type="text" id="in2"><br><br>
+
+    <button onclick="addition()">Add</button>
+
+    <h3 id="msg"></h3>
+
+    <script>
+
+        function addition(){
+
+            let num1 = Number(document.getElementById('in1').value);
+
+            console.log(num1, typeof num1);
+
+ 
+
+            let num2 = Number(document.getElementById('in2').value);
+
+            console.log(num2, typeof num2);
+
+ 
+
+            let res = document.getElementById('msg');
+
+            res.innerText = `Addition is ${num1+num2}`;
+
+        }
+
+    </script>
+
+</body>
+
+
+
+

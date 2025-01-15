@@ -1,0 +1,29 @@
+div {
+    height: 53px;
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between */
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+div a {
+    border: 2px solid black;
+    font-family: cursive;
+    font-weight: bold;
+    background-color: lightcyan;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    height: 30px;
+}
+
+div a:hover {
+    background-color: black;
+    color: aliceblue;
+}

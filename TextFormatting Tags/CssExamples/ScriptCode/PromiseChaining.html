@@ -1,0 +1,37 @@
+<script>
+    function placeOrder(item) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Order placed", item);
+                resolve();
+            }, 2000)
+        });
+    }
+
+    function makePayement(amt) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Payment received", amt);
+                resolve();
+            }, 3000)
+        });
+    }
+
+    function confirmOrder() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Order confirmed");
+                resolve();
+            }, 2000)
+        });
+    }
+
+    function emailSent() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("Successfully sent");
+                resolve();
+            }, 1000)
+        });
+    }
+</script>

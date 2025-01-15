@@ -1,0 +1,60 @@
+<script>
+    let arr = [35,65,5,6,8];
+    console.log(Array.isArray(arr));
+
+    arr.push(100); // add number to last 
+    console.log(arr);
+
+    arr.pop(); // remove number frm last 
+    console.log(arr);
+
+    arr.unshift(9); // add number to first 
+    console.log(arr);
+
+    arr.shift(9); // remove number frm first 
+    console.log(arr);
+
+    number = [10,20,30,40,50,60,70,80];
+    console.log(number);
+    number.splice(2, 3, 600, 700, 'kod', true);
+    console.log(number);
+
+    let deletedCount = number.splice(1, 4, 500);
+    console.log(number);
+
+    arr1 = [10,50,89,9];
+    let new_arr = arr1.slice(1,3);
+    console.log(arr1);
+    console.log(new_arr);
+
+    // .filter method(arrow fuction as argument)
+    even = arr1.filter((ele)=>ele%2===0);
+    console.log(even);
+
+    // .filter method (function as argument)
+    even = arr1.filter(function (ele) {
+        if (ele % 2 === 0){
+            return ele;
+        }
+    });
+    console.log(even);
+
+    // .map method(arrow fuction as argument)
+    sq = arr1.map((ele)=>ele*ele);
+    console.log(sq);
+
+    // .map method (function as argument)
+    sq = arr1.map(function (ele) {
+            return ele * ele;
+    });
+    console.log(sq);
+    
+    // .reduce method(give product of arr)
+    product = a.reduce(function (acc, ele) {
+            return acc * ele;
+    }, 1);
+    console.log(product);
+
+
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>classList.add() and classList.remove()</title>
+    <style>
+        .styles {
+            color: blue;
+            font-size: bold;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <P id="para">Welcome to DOM Manipulation</P>
+    <button onclick="fun()">Click</button>
+
+    <script>
+        const target = document.getElementById('para');
+        let toggle = false;
+
+        function fun() { 
+            if (!toggle) {
+            target.classList.add('styles');
+            toggle = true;
+        } else {
+            target.classList.remove('styles');
+            toggle = false;
+        }
+        } 
+    </script>
+</body>
+</html>

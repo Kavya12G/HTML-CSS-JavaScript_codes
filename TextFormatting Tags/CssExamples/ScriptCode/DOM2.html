@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>getElementByClass()</title>
+</head>
+<body>
+    <p class="container">para 1</p>
+    <p class="container">para 2</p>
+    <p class="container">para 3</p>
+
+    <button onClick="fun()">Click</button>
+
+    <script>
+        function fun() {
+        const target = document.getElementsByClassName('container');
+        console.log("Length bofore DOM update is: ", target.length);
+
+        const newEle = document.createElement('p'); // <p></p>
+        newEle.innerHTML = `<h3 style='color:blue'>Hello<h3>`; //<div><h3 style='color:blue'>Hello</h3></div>
+        newEle.classList.add('container');
+        document.body.appendChild(newEle);
+        console.log("Length after DOM update is: ", target.length);
+        }
+    </script>
+</body>
+</html>
+
+
+

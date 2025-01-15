@@ -1,0 +1,35 @@
+<!--
+1.It won't support all array methods  (.map , .reduce , .filter)
+2. Arguments object is not supported by arrow function  --> 
+
+<script>
+    function add() {
+        if (arguments.length === 0) {
+            console.log("No arguments....");
+        } else {
+            let sum = 0; 
+            for (let i = 0; i < arguments.length; i++) {
+                sum = sum + arguments[i];
+            }
+            // let sum = arguments.reduce((acc, ele) => (acc + ele), 0 );  //error
+            console.log("Sum of all arguments: ", sum);    
+        }
+    }
+    add();
+    add(3,5,6,78,8,9);
+ 
+</script>
+
+
+<script>
+    let sub = () => {
+        if (arguments.length === 0) {
+            console.log("No arguments....");
+        } else {
+            let sum = arguments.reduce((acc, ele) => (acc + ele), 0 );  //error
+            console.log("Sum of all arguments: ", sum);    
+        }
+    }
+
+    sub();
+</script>

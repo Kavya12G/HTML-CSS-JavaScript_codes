@@ -1,0 +1,43 @@
+<!--Higher order functions are such functions which takes another function as a argument-->
+
+<script>
+    function greet(name) {
+        console.log("Hello", name);
+    }
+
+    function processGreet(callback, name) {
+        callback(name);
+    }
+
+    processGreet(greet, 'Akash');
+
+/* callback = function(name) {
+    console.log('Hello', name) // internally happens
+}
+*/
+
+// Way 2 of passing callbacks to higher order:
+
+function processAddition(callback, a, b) {
+    callback(a, b);
+}
+processAddition((a,b)=>console.log(a+b), 100, 200);
+
+// way 3
+
+function processSub(callback, a, b) {
+    callback(a, b);
+}
+processSub(function(a,b) {
+    console.log("sub is:", a-b);
+}, 200, 30);
+
+/* filter , map and reduce takes another function as argument tha's why we call them as higher oredr functions.*/
+
+// Built-in Higher oredr functions
+
+// 1.filter(()=>{})
+// 2.map(()=>{})
+// 3.reduce((acc, ele)=>{})
+</script>
+
