@@ -1,4 +1,5 @@
-<!-- Spread operator (support all array methods)--> 
+<!-- Spread operator (support all array methods)  -->
+ 
 <script>
     function add(...args) {
         if (args.length === 0) {
@@ -11,4 +12,17 @@
 
     add();
     add(8,5,7,8);
+</script>
+
+<script>
+    let sub = (...args) => {
+        if (args.length === 0) {
+            console.log("No arguments....");
+        } else {
+            let sum = args.reduce((acc, ele) => (acc + ele), 0 );  //error
+            console.log("Sum of all arguments: ", sum);    
+        }
+    }
+
+    sub();
 </script>
